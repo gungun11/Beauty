@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app >
+
+    <servlet>
+        <servlet-name>KaptchaServlet</servlet-name>
+        <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>KaptchaServlet</servlet-name>
+        <url-pattern>/kaptcha.jpg</url-pattern>
+    </servlet-mapping>
+
+
+    
+    <!-- 配置错误页面 -->
+    <error-page>
+        <!-- error-code错误码 404 , 500 -->
+        <error-code>500</error-code>
+        <!--
+            location标签跳转的错误页面路径
+        -->
+        <location>/pages/error500.jsp</location>
+    </error-page>
+
+    <!-- 配置错误页面 -->
+    <error-page>
+        <!-- error-code错误码 404 , 500 -->
+        <error-code>404</error-code>
+        <!-- location标签跳转的错误页面路径 -->
+        <location>/pages/error404.jsp</location>
+    </error-page>
+
+
+
+
+</web-app>
